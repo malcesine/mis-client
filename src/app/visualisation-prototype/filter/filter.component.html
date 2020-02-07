@@ -1,0 +1,93 @@
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <div fxLayout="column">
+        <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <mat-form-field>
+            <mat-label>Jahr:</mat-label>
+            <mat-select>
+              <mat-option>2000</mat-option>
+              <mat-option>2000</mat-option>
+              <mat-option>2000</mat-option>
+              <mat-option>2000</mat-option>
+              <mat-option>2000</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Monat:</mat-label>
+            <mat-select>
+              <mat-option>Jänner</mat-option>
+              <mat-option>Februrar</mat-option>
+              <mat-option>März</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Tag:</mat-label>
+            <mat-select>
+              <mat-option>1</mat-option>
+              <mat-option>2</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Woche:</mat-label>
+            <mat-select>
+              <mat-option>KW 01</mat-option>
+              <mat-option>KW 02</mat-option>
+              <mat-option>KW 03</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Quartal:</mat-label>
+            <mat-select>
+              <mat-option>Q1</mat-option>
+              <mat-option>Q2</mat-option>
+              <mat-option>Q3</mat-option>
+              <mat-option>Q4</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <mat-form-field>
+            <mat-label>von:</mat-label>
+            <input matInput [matDatepicker]="pickerFrom">
+            <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+            <mat-datepicker #pickerFrom></mat-datepicker>
+
+          </mat-form-field>
+          <button mat-icon-button>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+          <mat-form-field>
+            <mat-label>bis:</mat-label>
+            <input matInput [matDatepicker]="pickerTo">
+            <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+            <mat-datepicker #pickerTo></mat-datepicker>
+
+          </mat-form-field>
+          <button mat-icon-button>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="space-between">
+        <button mat-raised-button color="primary">Anzeigen</button>
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <span>Blättern</span>
+          <button mat-icon-button>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>
