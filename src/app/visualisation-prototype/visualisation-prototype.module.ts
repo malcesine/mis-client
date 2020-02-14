@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { VisualisationPrototypeRoutingModule } from './visualisation-prototype-routing.module';
-import { NavigationComponent } from './navigation/navigation.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -24,19 +22,19 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
 import { DiagrammComponent } from './diagramm/diagramm.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
-    NavigationComponent,
     ExportComponent,
     TableComponent,
     FilterComponent,
-    DiagrammComponent
+    DiagrammComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
-    VisualisationPrototypeRoutingModule,
     ChartsModule,
     MatTabsModule,
     FlexLayoutModule,
@@ -52,7 +50,14 @@ import { DiagrammComponent } from './diagramm/diagramm.component';
     MatPaginatorModule,
     MatSortModule,
     MatDatepickerModule,
-    MatCardModule
+    MatCardModule,
+    MatPaginatorModule
+  ],
+  exports: [
+    HeaderComponent,
+    DiagrammComponent,
+    TableComponent,
+    ExportComponent
   ]
 })
 export class VisualisationPrototypeModule { }

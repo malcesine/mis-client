@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NavigationComponent } from './essentials/navigation/navigation.component';
+import { HeaderComponent } from './visualisation-prototype/header/header.component';
+import { DiagrammComponent } from './visualisation-prototype/diagramm/diagramm.component';
+import { TableComponent } from './visualisation-prototype/table/table.component';
+import { ExportComponent } from './visualisation-prototype/export/export.component';
 
 
 const routes: Routes = [{
@@ -8,12 +12,31 @@ const routes: Routes = [{
   component: NavigationComponent,
   children: [
     {
-      path: 'visualisation',
-      loadChildren: () => import('./visualisation-prototype/visualisation-prototype.module').then(m => m.VisualisationPrototypeModule)
+      path: 'visualisation/:vID',
+      component: HeaderComponent,
+      children: [
+        {
+          path: 'diagramm',
+          component: DiagrammComponent
+        },
+        {
+          path: 'tabelle',
+          component: TableComponent
+        },
+        {
+          path: 'export',
+          component: ExportComponent
+        },
+        {
+          path: '**',
+          redirectTo: 'diagramm',
+          pathMatch: 'full'
+        }
+      ]
     },
     {
       path: '**',
-      redirectTo: '/visualisation',
+      redirectTo: '/visualisation/abc',
       pathMatch: 'full'
     }
   ]

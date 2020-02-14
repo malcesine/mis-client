@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EssentialsModule } from './essentials/essentials.module';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { VisualisationPrototypeModule } from './visualisation-prototype/visualisation-prototype.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     AppRoutingModule,
     BrowserAnimationsModule,
     EssentialsModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    VisualisationPrototypeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

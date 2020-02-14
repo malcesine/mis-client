@@ -1,6 +1,9 @@
-<!-- <div style="display: block;">
+<div style="display: block;height: 600px;position: relative;">
+  <canvas #dragcanvas style="position: absolute;pointer-events: none;top: 0;left: 0;right: 0; bottom: 0;"></canvas>
   <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
-    [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
+    [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins"
+    (pointerdown)="dragBegin($event,dragcanvas)" (pointermove)="drag($event,dragcanvas)"
+    (pointerup)="dragEnd($event,dragcanvas)">
   </canvas>
-</div> -->
-<img style="width: 100%;" src="assets/chart.png" >
+
+</div>

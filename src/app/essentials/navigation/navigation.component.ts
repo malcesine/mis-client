@@ -17,99 +17,107 @@ export class NavigationComponent {
       shareReplay()
     );
   config: Configuration = {
-    interfaceWithRoute: true
+    interfaceWithRoute: true,
+    highlightOnSelect: true,
+    collapseOnSelect: true
   };
   navigation: MultilevelNodes[] = [
     {
-      label: 'Marktinformationssystem',
+      label: 'Intraday DE+AT',
       items: [
         {
-          label: 'Intraday DE+AT',
+          label: 'EPEX Intraday DE/AT 15min',
+          link: '/visualisation/ABC1'
+        },
+        {
+          label: 'EPEX Intraday DE/AT 60min',
+          link: '/visualisation/ABC2'
+        },
+        {
+          label: 'EPEX Intraday DE 15min',
+          link: '/visualisation/ABC3'
+        },
+        {
+          label: 'EPEX Intraday DE 60min',
+          link: '/visualisation/ABC4'
+        },
+        {
+          label: 'EPEX Intraday AT 15min',
+          link: '/visualisation/ABC5'
+        },
+        {
+          label: 'EPEX Intraday AT 60min',
+          link: '/visualisation/ABC6'
+        }
+      ]
+    },
+    {
+      label: 'Spot',
+      items: [
+        {
+          label: 'Spotmarkt DE+AT',
           items: [
             {
-              label: 'EPEX Intraday DE/AT 15min'
+              label: 'EXAA/EPEC DE/AT Tages Spot (Nur bis 10/2018)',
+              link: '/visualisation/ABC7'
             },
             {
-              label: 'EPEX Intraday DE/AT 60min'
+              label: 'EXAA/EPEC DE/AT (Nur bis 10/2018)',
+              link: '/visualisation/ABC8'
             },
             {
-              label: 'EPEX Intraday DE 15min'
+              label: 'Spotmarkt DE',
+              link: '/visualisation/ABC9'
             },
             {
-              label: 'EPEX Intraday DE 60min'
+              label: 'Spotmarkt AT',
+              link: '/visualisation/ABC10'
             },
             {
-              label: 'EPEX Intraday AT 15min'
-            },
-            {
-              label: 'EPEX Intraday AT 60min'
+              label: 'Market Coupling Preis AT (Daten nicht zur Veröffentlichung freigegeben)',
+              link: '/visualisation/ABC11'
             }
           ]
         },
         {
-          label: 'Spot',
-          items: [
-            {
-              label: 'Spotmarkt DE+AT',
-              items: [
-                {
-                  label: 'EXAA/EPEC DE/AT Tages Spot (Nur bis 10/2018)'
-                },
-                {
-                  label: 'EXAA/EPEC DE/AT (Nur bis 10/2018)'
-                },
-                {
-                  label: 'Spotmarkt DE'
-                },
-                {
-                  label: 'Spotmarkt AT'
-                },
-                {
-                  label: 'Market Coupling Preis AT (Daten nicht zur Veröffentlichung freigegeben)'
-                }
-              ]
-            },
-            {
-              label: 'Spotmärkte Europa',
-              items: [
-                {
-                  label: '...'
-                }
-              ]
-            }
-          ]
-        },
-        {
-          label: 'Futures',
+          label: 'Spotmärkte Europa',
           items: [
             {
               label: '...'
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      label: 'Futures',
+      items: [
         {
-          label: 'Spreads',
-          items: [
-            {
-              label: '...'
-            }
-          ]
-        },
+          label: '...'
+        }
+      ]
+    },
+    {
+      label: 'Spreads',
+      items: [
         {
-          label: 'Emissions',
-          items: [
-            {
-              label: '...'
-            }
-          ]
-        },
+          label: '...'
+        }
+      ]
+    },
+    {
+      label: 'Emissions',
+      items: [
         {
-          label: 'Erneuerbare Energien',
-          items: [
-            {
-              label: '...'
-            }
-          ]
+          label: '...'
+        }
+      ]
+    },
+    {
+      label: 'Erneuerbare Energien',
+      items: [
+        {
+          label: '...'
         }
       ]
     }

@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class NavigationComponent implements OnInit {
-
+export class HeaderComponent implements OnInit {
   navLinks = [
     {
       label: 'Diagramm',
@@ -21,6 +20,7 @@ export class NavigationComponent implements OnInit {
       path: 'export'
     }
   ]
+
   constructor() { }
 
   ngOnInit(): void {
